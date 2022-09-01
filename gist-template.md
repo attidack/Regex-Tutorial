@@ -36,10 +36,6 @@ This tutorial will walk through the regular expression to find or validate an E-
 ### Character Classes
 - \d matches a digit (equivalent to [0-9])
 
-### Flags
-- A regex usually comes within this form /abc/, where the search pattern is delimited by two slash characters /. At the end we can specify a flag with these values
-
-
 ### Grouping and Capturing
 - parentheses create a capturing group, like everything before and after the @ then after the . (period)
 ### Bracket Expressions
@@ -47,15 +43,6 @@ This tutorial will walk through the regular expression to find or validate an E-
 
 ### Greedy and Lazy Match
 - this expression is a greedy match with the use of the + without the use of a ?
-
-### Boundaries
-- there are not any boundries in this expression. \b indicates a boundary
-
-### Back-references
-- this expression doesnt have any back-references ie. \1 \2 \3
-
-### Look-ahead and Look-behind
-- this expression doesnt have any look ahead or look behind components ie d(?=r) or (?<=r)d   
 
 ## Author
 
