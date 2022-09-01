@@ -11,38 +11,39 @@ This tutorial will walk through the regular expression to find or validate an E-
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
 ### Anchors
-- the <code>^</code>  matches any string that starts with the qualifiers that are preceeding it.
-- the <code> $ </code> matches a string that ends with the qualifiers before the symbol is called
+
+The ^ symbol designates the beginning of the the string, while the $ symbol shows where the string ends.
 
 ### Quantifiers
-- {2,6} are the Quantifiers in this expression it says that the string is going to be between 2 and 6 characters long.
-- the + symbol is also a Quantifier in this expression to look for 1 or more expressions
-### OR Operator
-- everything between the [ ] brackets is look at as an  or expression 
+
+The {2,6} in the expression is a quantifier. It indicates that the string should be between should be between 2 and 6 characters long. The other quantifier in the expression is the "+" symbol. It works to connect the the username, email service and domain name of the email together. 
 
 ### Character Classes
-- \d matches a digit (equivalent to [0-9])
+
+The \d in the second grouping is a character class and matches a single character that is a digit.
 
 ### Grouping and Capturing
-- parentheses create a capturing group, like everything before and after the @ then after the . (period)
+
+The parentheses () separate the expression into smaller groups. 
+    ([a-z0-9_\.-]+) matches the username 
+    ([\da-z\.-]+) matches the email server
+    ([a-z\.]{2,6}) will match the domain name of the email (for example, .com or .edu)
+
 ### Bracket Expressions
--  this section would reflect the same thing as the or operator section.
+
+The [] symbols in this expression group items and indicate what will be allowed to appear in that specific section. Here is an explanation of the first bracket section in the expression: [a-z0-9_\.-] matches any character a-z, 0-9 and matches "_", ".", and "-". The second bracket section, [\da-z\.-] matches any character a-z, ".", and "-". The third bracket, [a-z\.] matches any character a-z and ".".
 
 ### Greedy and Lazy Match
-- this expression is a greedy match with the use of the + without the use of a ?
+
+The "+" symbol is a greedy operator. It expands the match as far as it can.
 
 ## Author
 
